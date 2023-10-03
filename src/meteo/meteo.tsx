@@ -3,6 +3,7 @@ import axios from "axios";
 import { APIKey } from "../config";
 import { MeteoType } from "./types";
 
+
 import * as S from "./meteo.styled";
 
 const Meteo: React.FC = () => {
@@ -32,16 +33,15 @@ const Meteo: React.FC = () => {
 
   return (
     <S.Container>
-      {/* <div>{meteoData}</div> */}
-
-      {/* <iframe
-        name="meteoParis"
-        seamless
-        width="888"
-        height="336"
-        src="https://www.infoclimat.fr/public-api/mixed/iframeSLIDE?_ll=48.85341,2.3488&_inc=WyJQYXJpcyIsIjQyIiwiMjk4ODUwNyIsIkZSIl0=&_auth=AhheSQd5UXNVeFFmVyEAKVc%2FBTALfQgvBnpXNApvB3oCaVMyDm4BZ1Y4BnsHKAM1VXgCYVphCTkEb1IqXy0FZAJoXjIHbFE2VTpRNFd4ACtXeQVkCysILwZsVzIKeQdlAmlTMw5zAWpWMAZ6Bz8DN1V5An1aZAk3BG5SMF86BW4CaV44B2RRO1UlUSxXYQAxV2UFYAs3CDMGYFcwCm8HMgJlUzQOOwFmVicGbAc2AzBVYQJlWmIJNQRiUipfLQUfAhJeJwckUXFVb1F1V3oAYVc6BTE%3D&_c=6412fde6ca4f6cba41c13b70eafa20a0"
-      ></iframe> */}
-
+      <S.ContIframe>
+        <iframe
+          name="meteoParis"
+          seamless
+           width="888"
+           height="336"
+          src="https://www.infoclimat.fr/public-api/mixed/iframeSLIDE?_ll=48.85341,2.3488&_inc=WyJQYXJpcyIsIjQyIiwiMjk4ODUwNyIsIkZSIl0=&_auth=AhheSQd5UXNVeFFmVyEAKVc%2FBTALfQgvBnpXNApvB3oCaVMyDm4BZ1Y4BnsHKAM1VXgCYVphCTkEb1IqXy0FZAJoXjIHbFE2VTpRNFd4ACtXeQVkCysILwZsVzIKeQdlAmlTMw5zAWpWMAZ6Bz8DN1V5An1aZAk3BG5SMF86BW4CaV44B2RRO1UlUSxXYQAxV2UFYAs3CDMGYFcwCm8HMgJlUzQOOwFmVicGbAc2AzBVYQJlWmIJNQRiUipfLQUfAhJeJwckUXFVb1F1V3oAYVc6BTE%3D&_c=6412fde6ca4f6cba41c13b70eafa20a0"
+        ></iframe>
+      </S.ContIframe>
       <S.Recherche>
         <input
           value={location}
